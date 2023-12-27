@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" 
+        rel="stylesheet"
+        >
+
+        <title>Django</title>
+    </head>
+    <body>
+        <section class="py-10">
+            <h1 class="text-center text-5xl">{{book.title}}</h1>
+            <div class="justify-self-center">
+                <img src="{{book.thumbnailUrl}}" width="200" />
+            </div>
+            <p>{{book.pageCount}}</p>
+            <p>{{book.authors | join:", "}}</p>
+            <p>{{book.shortDescription}}</p>
+        </section>
+    </body>
+</html>
